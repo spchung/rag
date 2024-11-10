@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "py-text-process"
+version = "0.1.0"
+description = ""
+authors = ["stephen <chung25stephen@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+pymilvus = "^2.4.9"
+milvus-model = "^0.2.8"
+nltk = "^3.9.1"
+pymupdf4llm = "^0.0.17"
+llama-index = "^0.11.22"
+python-dotenv = "^1.0.1"
+llama-index-vector-stores-milvus = "^0.2.7"
+llama-index-llms-huggingface = "^0.3.5"
+llama-index-llms-huggingface-api = "^0.2.0"
+llama-index-embeddings-huggingface = "^0.3.1"
+llama-index-embeddings-instructor = "^0.2.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
