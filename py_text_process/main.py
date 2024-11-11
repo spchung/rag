@@ -4,7 +4,6 @@ from llama_index.core.schema import MetadataMode
 from sentence_transformers import SentenceTransformer
 from llama_index.core.node_parser import SentenceSplitter
 
-
 loader = PyMuPDFReader()
 documents = loader.load(file_path="docs/example.pdf")
 
@@ -17,7 +16,6 @@ text_splitter = SentenceSplitter(
 )
 
 nodes = text_splitter.get_nodes_from_documents(documents)
-
 
 def process_text(text):
   text = text.replace("\n", "")
