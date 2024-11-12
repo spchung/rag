@@ -1,0 +1,3 @@
+id,type,name,dimension
+1,huggingFace,sentence-transformers/all-MiniLM-L6-v2,384
+2,milvus,DefaultEmbeddingFunction,768
