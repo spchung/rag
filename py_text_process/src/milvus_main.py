@@ -1,4 +1,4 @@
-from db import client
+from src.db import client
 from llama_index.readers.file import PyMuPDFReader
 from llama_index.core.schema import MetadataMode
 from sentence_transformers import SentenceTransformer

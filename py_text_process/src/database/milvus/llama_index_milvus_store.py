@@ -1,5 +1,5 @@
 # 1 load document
-from db import client
+from src.db import client
 from llama_index.readers.file import PyMuPDFReader
 from llama_index.core.schema import MetadataMode
 

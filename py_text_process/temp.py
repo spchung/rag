@@ -1,4 +1,4 @@
-from db import client
+from src.db import client
 from typing import List
 from nltk import sent_tokenize
 from pprint import pprint

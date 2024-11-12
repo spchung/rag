@@ -1,6 +1,6 @@
 from sentence_transformers import SentenceTransformer
 from llama_index.core.schema import MetadataMode
-from db import client
+from src.db import client
 
 from pymilvus import model
 # embedding_fn = model.DefaultEmbeddingFunction()

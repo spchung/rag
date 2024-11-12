@@ -1,5 +1,5 @@
 
-from milvus_controller.milvus_connect import MilvusConnector
+from .milvus_connect import MilvusConnector
 
 class MilvusController:
   def __init__ (self, host, port):
