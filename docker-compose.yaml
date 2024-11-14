@@ -62,30 +62,9 @@ services:
       interval: 10s
       timeout: 5s
       retries: 5
-
-  # Deno API
-  api:
-    container_name: deno-api
-    build:
-      context: ./api
-      dockerfile: Dockerfile
-    volumes:
-      - ./api:/app
-      - /app/node_modules  # Exclude node_modules if any
-    ports:
-      - "8080:8080"
-    environment:
-      - POSTGRES_HOST=postgres
-      - POSTGRES_USER=${POSTGRES_USER:-postgres}
-      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD:-postgrespassword}
-      - POSTGRES_DB=${POSTGRES_DB:-myapp}
-      - MILVUS_HOST=milvus
-      - MILVUS_PORT=19530
-    depends_on:
-      - postgres
-      - milvus
   
-  py_text_process:
+  api:
+    container_name: fast-api
     build: 
       context: ./py_text_process
       dockerfile: Dockerfile
@@ -100,6 +79,7 @@ services:
       - MILVUS_PORT=19530
     depends_on:
       - postgres
+      - milvus
 
   # Fresh UI
   ui:
