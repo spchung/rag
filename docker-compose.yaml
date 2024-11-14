@@ -84,6 +84,22 @@ services:
     depends_on:
       - postgres
       - milvus
+  
+  py_text_process:
+    build: 
+      context: ./py_text_process
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      - POSTGRES_HOST=postgres
+      - POSTGRES_USER=${POSTGRES_USER:-postgres}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD:-postgrespassword}
+      - POSTGRES_DB=${POSTGRES_DB:-myapp}
+      - MILVUS_HOST=milvus
+      - MILVUS_PORT=19530
+    depends_on:
+      - postgres
 
   # Fresh UI
   ui:
