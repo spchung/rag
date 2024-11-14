@@ -1,0 +1,11 @@
+db entities:
+
+embedding_function
+- representing available embedding models
+
+collection
+- representing collections in milvus
+
+document
+- representing full documents 
+- fk back to collection

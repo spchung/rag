@@ -1,4 +1,4 @@
-from src.db import client
+from api.src.milvus.db import client
 from llama_index.readers.file import PyMuPDFReader
 from llama_index.core.schema import MetadataMode
 from sentence_transformers import SentenceTransformer
@@ -21,7 +21,6 @@ def process_text(text):
   text = text.replace("\n", "")
   return text
   
-node_dicts = []
 
 node_ids = [node.node_id for node in nodes]
 sentences = [process_text(node.get_text()) for node in nodes]
